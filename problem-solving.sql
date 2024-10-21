@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 20, 2024 at 08:12 AM
+-- Generation Time: Oct 21, 2024 at 08:35 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `devicemart`
+-- Database: `problem-solving`
 --
 
 -- --------------------------------------------------------
@@ -138,7 +138,7 @@ CREATE TABLE `customer_profiles` (
 --
 
 INSERT INTO `customer_profiles` (`id`, `cus_name`, `cus_add`, `cus_city`, `cus_state`, `cus_postcode`, `cus_country`, `cus_phone`, `cus_fax`, `ship_name`, `ship_add`, `ship_city`, `ship_state`, `ship_postcode`, `ship_country`, `ship_phone`, `user_id`, `created_at`, `updated_at`) VALUES
-(1, 'Rabbil Hasan', 'Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207', 'Dhaka', 'Dhaka', '1207', 'Bangladesh', '01785388919', '01785388919', 'Rabbil Hasan', 'Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207', 'Dhaka', 'Dhaka', '1207', 'Bangladesh', '01785388919', 1, '2023-08-25 21:34:14', '2023-10-14 04:20:18'),
+(1, 'Rabbil Hasan', 'Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207', 'Dhaka', 'Dhaka', '1207', 'Bangladesh', '01785388919', '01785388919', 'Rabbil Hasan', 'Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207', 'Dhaka', 'Dhaka', '1207', 'Bangladesh', '01785388919', 5, '2023-08-25 21:34:14', '2023-10-14 04:20:18'),
 (3, 'John Doe Albert', '123 Main Street, Suite 400', 'Dhaka', 'Dhaka', '1000', 'Bangladesh', '+880123456789', '+880987654321', 'Jane Doe', '456 Elm Street, Apt 12', 'Chittagong', 'Chittagong', '4000', 'Bangladesh', '+880112233445', 4, '2024-10-18 03:17:25', '2024-10-18 03:34:24');
 
 -- --------------------------------------------------------
@@ -168,34 +168,34 @@ CREATE TABLE `invoices` (
 --
 
 INSERT INTO `invoices` (`id`, `total`, `vat`, `payable`, `cus_details`, `ship_details`, `tran_id`, `val_id`, `delivery_status`, `payment_status`, `user_id`, `created_at`, `updated_at`) VALUES
-(2, '564000', '16920', '580920', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '6511c5da463fa', '0', 'Pending', 'Pending', 1, '2023-09-25 11:39:38', '2023-09-25 11:39:38'),
-(3, '564000', '16920', '580920', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '6511c60edfbdd', '0', 'Pending', 'Pending', 1, '2023-09-25 11:40:30', '2023-09-25 11:40:30'),
+(2, '564000', '16920', '580920', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '6511c5da463fa', '0', 'Pending', 'Pending', 5, '2023-09-25 11:39:38', '2023-09-25 11:39:38'),
+(3, '564000', '16920', '580920', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '6511c60edfbdd', '0', 'Pending', 'Pending', 5, '2023-09-25 11:40:30', '2023-09-25 11:40:30'),
 (4, '470000', '14100', '484100', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '6525fe18675e2', '0', 'Pending', 'Pending', 2, '2023-10-10 19:44:56', '2023-10-10 19:44:56'),
 (8, '470000', '14100', '484100', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '652610bfa8041', '0', 'Pending', 'Pending', 2, '2023-10-10 21:04:31', '2023-10-10 21:04:31'),
 (11, '470000', '14100', '484100', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '65261272a5a7c', '0', 'Pending', 'Pending', 2, '2023-10-10 21:11:46', '2023-10-10 21:11:46'),
-(12, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '652612f75e4c7', '0', 'Pending', 'Pending', 1, '2023-10-10 21:13:59', '2023-10-10 21:13:59'),
-(13, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '6526132be3417', '0', 'Pending', 'Pending', 1, '2023-10-10 21:14:51', '2023-10-10 21:14:51'),
-(14, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '6526134257fcb', '0', 'Pending', 'Pending', 1, '2023-10-10 21:15:14', '2023-10-10 21:15:14'),
-(15, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '6526138e8d7ae', '0', 'Pending', 'Pending', 1, '2023-10-10 21:16:30', '2023-10-10 21:16:30'),
-(16, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '652613a79aec0', '0', 'Pending', 'Pending', 1, '2023-10-10 21:16:55', '2023-10-10 21:16:55'),
-(17, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '652613b8ef725', '0', 'Pending', 'Pending', 1, '2023-10-10 21:17:12', '2023-10-10 21:17:12'),
-(18, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '652614518ece4', '0', 'Pending', 'Pending', 1, '2023-10-10 21:19:45', '2023-10-10 21:19:45'),
-(19, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '6526145c7ae8d', '0', 'Pending', 'Pending', 1, '2023-10-10 21:19:56', '2023-10-10 21:19:56'),
-(20, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '6526146b6eced', '0', 'Pending', 'Pending', 1, '2023-10-10 21:20:11', '2023-10-10 21:20:11'),
-(21, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '6526149251456', '0', 'Pending', 'Pending', 1, '2023-10-10 21:20:50', '2023-10-10 21:20:50'),
-(22, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '652614a9427fa', '0', 'Pending', 'Pending', 1, '2023-10-10 21:21:13', '2023-10-10 21:21:13'),
-(23, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '652614c1054be', '0', 'Pending', 'Pending', 1, '2023-10-10 21:21:37', '2023-10-10 21:21:37'),
-(24, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '652614ccb13b1', '0', 'Pending', 'Pending', 1, '2023-10-10 21:21:48', '2023-10-10 21:21:48'),
-(25, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '652614d88bff8', '0', 'Pending', 'Pending', 1, '2023-10-10 21:22:00', '2023-10-10 21:22:00'),
-(26, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '652615176f458', '0', 'Pending', 'Pending', 1, '2023-10-10 21:23:03', '2023-10-10 21:23:03'),
-(27, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '6526153f243c0', '0', 'Pending', 'Pending', 1, '2023-10-10 21:23:43', '2023-10-10 21:23:43'),
-(28, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '65261727c2956', '0', 'Pending', 'Success', 1, '2023-10-10 21:31:51', '2023-10-10 21:38:07'),
-(29, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '652a2c3525ad7', '0', 'Pending', 'Pending', 1, '2023-10-13 23:50:45', '2023-10-13 23:50:45'),
-(30, '1410000', '42300', '1452300', 'Name:Rabbil Hasan Rupom,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '652a6452330b4', '0', 'Pending', 'Success', 1, '2023-10-14 03:50:10', '2023-10-14 03:50:16'),
-(31, '1410000', '42300', '1452300', 'Name:Rabbil Hasan Rupom,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '652a67821942b', '0', 'Pending', 'Pending', 1, '2023-10-14 04:03:46', '2023-10-14 04:03:46'),
-(32, '1410000', '42300', '1452300', 'Name:Rabbil Hasan Rupom,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '652a682f1c391', '0', 'Pending', 'Success', 1, '2023-10-14 04:06:39', '2023-10-14 04:09:04'),
-(33, '470000', '14100', '484100', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '652a743236e59', '0', 'Pending', 'Success', 1, '2023-10-14 04:57:54', '2023-10-14 04:57:59'),
-(34, '470000', '14100', '484100', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '653498771fc9b', '0', 'Pending', 'Success', 1, '2023-10-21 21:35:19', '2023-10-21 21:35:40'),
+(12, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '652612f75e4c7', '0', 'Pending', 'Pending', 5, '2023-10-10 21:13:59', '2023-10-10 21:13:59'),
+(13, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '6526132be3417', '0', 'Pending', 'Pending', 5, '2023-10-10 21:14:51', '2023-10-10 21:14:51'),
+(14, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '6526134257fcb', '0', 'Pending', 'Pending', 5, '2023-10-10 21:15:14', '2023-10-10 21:15:14'),
+(15, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '6526138e8d7ae', '0', 'Pending', 'Pending', 5, '2023-10-10 21:16:30', '2023-10-10 21:16:30'),
+(16, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '652613a79aec0', '0', 'Pending', 'Pending', 5, '2023-10-10 21:16:55', '2023-10-10 21:16:55'),
+(17, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '652613b8ef725', '0', 'Pending', 'Pending', 5, '2023-10-10 21:17:12', '2023-10-10 21:17:12'),
+(18, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '652614518ece4', '0', 'Pending', 'Pending', 5, '2023-10-10 21:19:45', '2023-10-10 21:19:45'),
+(19, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '6526145c7ae8d', '0', 'Pending', 'Pending', 5, '2023-10-10 21:19:56', '2023-10-10 21:19:56'),
+(20, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '6526146b6eced', '0', 'Pending', 'Pending', 5, '2023-10-10 21:20:11', '2023-10-10 21:20:11'),
+(21, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '6526149251456', '0', 'Pending', 'Pending', 5, '2023-10-10 21:20:50', '2023-10-10 21:20:50'),
+(22, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '652614a9427fa', '0', 'Pending', 'Pending', 5, '2023-10-10 21:21:13', '2023-10-10 21:21:13'),
+(23, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '652614c1054be', '0', 'Pending', 'Pending', 5, '2023-10-10 21:21:37', '2023-10-10 21:21:37'),
+(24, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '652614ccb13b1', '0', 'Pending', 'Pending', 5, '2023-10-10 21:21:48', '2023-10-10 21:21:48'),
+(25, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '652614d88bff8', '0', 'Pending', 'Pending', 5, '2023-10-10 21:22:00', '2023-10-10 21:22:00'),
+(26, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '652615176f458', '0', 'Pending', 'Pending', 5, '2023-10-10 21:23:03', '2023-10-10 21:23:03'),
+(27, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '6526153f243c0', '0', 'Pending', 'Pending', 5, '2023-10-10 21:23:43', '2023-10-10 21:23:43'),
+(28, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '65261727c2956', '0', 'Pending', 'Success', 5, '2023-10-10 21:31:51', '2023-10-10 21:38:07'),
+(29, '1410000', '42300', '1452300', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '652a2c3525ad7', '0', 'Pending', 'Pending', 5, '2023-10-13 23:50:45', '2023-10-13 23:50:45'),
+(30, '1410000', '42300', '1452300', 'Name:Rabbil Hasan Rupom,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '652a6452330b4', '0', 'Pending', 'Success', 5, '2023-10-14 03:50:10', '2023-10-14 03:50:16'),
+(31, '1410000', '42300', '1452300', 'Name:Rabbil Hasan Rupom,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '652a67821942b', '0', 'Pending', 'Pending', 5, '2023-10-14 04:03:46', '2023-10-14 04:03:46'),
+(32, '1410000', '42300', '1452300', 'Name:Rabbil Hasan Rupom,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '652a682f1c391', '0', 'Pending', 'Success', 5, '2023-10-14 04:06:39', '2023-10-14 04:09:04'),
+(33, '470000', '14100', '484100', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '652a743236e59', '0', 'Pending', 'Success', 5, '2023-10-14 04:57:54', '2023-10-14 04:57:59'),
+(34, '470000', '14100', '484100', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '653498771fc9b', '0', 'Pending', 'Success', 5, '2023-10-21 21:35:19', '2023-10-21 21:35:40'),
 (38, '470000', '14100', '484100', 'Name:John Doe Albert,Address:123 Main Street, Suite 400,City:Dhaka,Phone: +880123456789', 'Name:Jane Doe,Address:456 Elm Street, Apt 12 ,City:Chittagong ,Phone: +880123456789', '6713b45d8a47f', '0', 'Pending', 'Pending', 4, '2024-10-19 07:30:05', '2024-10-19 07:30:05'),
 (40, '470000', '14100', '484100', 'Name:John Doe Albert,Address:123 Main Street, Suite 400,City:Dhaka,Phone: +880123456789', 'Name:Jane Doe,Address:456 Elm Street, Apt 12 ,City:Chittagong ,Phone: +880123456789', '6713b647a32b4', '0', 'Pending', 'Pending', 4, '2024-10-19 07:38:15', '2024-10-19 07:38:15'),
 (43, '470000', '14100', '484100', 'Name:John Doe Albert,Address:123 Main Street, Suite 400,City:Dhaka,Phone: +880123456789', 'Name:Jane Doe,Address:456 Elm Street, Apt 12 ,City:Chittagong ,Phone: +880123456789', '6713c552d6287', '0', 'Pending', 'Pending', 4, '2024-10-19 08:42:27', '2024-10-19 08:42:27'),
@@ -204,7 +204,8 @@ INSERT INTO `invoices` (`id`, `total`, `vat`, `payable`, `cus_details`, `ship_de
 (51, '470000', '14100', '484100', 'Name:John Doe Albert,Address:123 Main Street, Suite 400,City:Dhaka,Phone: +880123456789', 'Name:Jane Doe,Address:456 Elm Street, Apt 12 ,City:Chittagong ,Phone: +880123456789', '671499e3bbbb5', '0', 'Pending', 'Pending', 4, '2024-10-19 23:49:23', '2024-10-19 23:49:23'),
 (52, '470000', '14100', '484100', 'Name:John Doe Albert,Address:123 Main Street, Suite 400,City:Dhaka,Phone: +880123456789', 'Name:Jane Doe,Address:456 Elm Street, Apt 12 ,City:Chittagong ,Phone: +880123456789', '67149a67f2f1a', '0', 'Pending', 'Pending', 4, '2024-10-19 23:51:36', '2024-10-19 23:51:36'),
 (53, '470000', '14100', '484100', 'Name:John Doe Albert,Address:123 Main Street, Suite 400,City:Dhaka,Phone: +880123456789', 'Name:Jane Doe,Address:456 Elm Street, Apt 12 ,City:Chittagong ,Phone: +880123456789', '67149c3245f9e', '0', 'Pending', 'Pending', 4, '2024-10-19 23:59:14', '2024-10-19 23:59:14'),
-(54, '470000', '14100', '484100', 'Name:John Doe Albert,Address:123 Main Street, Suite 400,City:Dhaka,Phone: +880123456789', 'Name:Jane Doe,Address:456 Elm Street, Apt 12 ,City:Chittagong ,Phone: +880123456789', '67149cd09f9f1', '0', 'Pending', 'Pending', 4, '2024-10-20 00:01:52', '2024-10-20 00:01:52');
+(54, '470000', '14100', '484100', 'Name:John Doe Albert,Address:123 Main Street, Suite 400,City:Dhaka,Phone: +880123456789', 'Name:Jane Doe,Address:456 Elm Street, Apt 12 ,City:Chittagong ,Phone: +880123456789', '67149cd09f9f1', '0', 'Pending', 'Pending', 4, '2024-10-20 00:01:52', '2024-10-20 00:01:52'),
+(58, '0', '0', '0', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207,City:Dhaka,Phone: 01785388919', 'Name:Rabbil Hasan,Address:Shekhertek 8,Mohammadpur, Adabor, Dhaka-1207 ,City:Dhaka ,Phone: 01785388919', '6715f464d6fa3', '0', 'Pending', 'Pending', 5, '2024-10-21 00:27:48', '2024-10-21 00:27:48');
 
 -- --------------------------------------------------------
 
@@ -228,57 +229,57 @@ CREATE TABLE `invoice_products` (
 --
 
 INSERT INTO `invoice_products` (`id`, `invoice_id`, `product_id`, `user_id`, `qty`, `sale_price`, `created_at`, `updated_at`) VALUES
-(2, 2, 4, 1, '5', '470000', '2023-09-25 11:39:38', '2023-09-25 11:39:38'),
-(3, 2, 9, 1, '1', '94000', '2023-09-25 11:39:38', '2023-09-25 11:39:38'),
-(4, 3, 4, 1, '5', '470000', '2023-09-25 11:40:30', '2023-09-25 11:40:30'),
-(5, 3, 9, 1, '1', '94000', '2023-09-25 11:40:30', '2023-09-25 11:40:30'),
+(2, 2, 4, 5, '5', '470000', '2023-09-25 11:39:38', '2023-09-25 11:39:38'),
+(3, 2, 9, 5, '1', '94000', '2023-09-25 11:39:38', '2023-09-25 11:39:38'),
+(4, 3, 4, 5, '5', '470000', '2023-09-25 11:40:30', '2023-09-25 11:40:30'),
+(5, 3, 9, 5, '1', '94000', '2023-09-25 11:40:30', '2023-09-25 11:40:30'),
 (6, 4, 1, 2, '5', '470000', '2023-10-10 19:44:56', '2023-10-10 19:44:56'),
 (10, 8, 1, 2, '5', '470000', '2023-10-10 21:04:31', '2023-10-10 21:04:31'),
 (13, 11, 1, 2, '5', '470000', '2023-10-10 21:11:46', '2023-10-10 21:11:46'),
-(14, 12, 4, 1, '5', '470000', '2023-10-10 21:13:59', '2023-10-10 21:13:59'),
-(15, 12, 9, 1, '10', '940000', '2023-10-10 21:13:59', '2023-10-10 21:13:59'),
-(16, 13, 4, 1, '5', '470000', '2023-10-10 21:14:51', '2023-10-10 21:14:51'),
-(17, 13, 9, 1, '10', '940000', '2023-10-10 21:14:51', '2023-10-10 21:14:51'),
-(18, 14, 4, 1, '5', '470000', '2023-10-10 21:15:14', '2023-10-10 21:15:14'),
-(19, 14, 9, 1, '10', '940000', '2023-10-10 21:15:14', '2023-10-10 21:15:14'),
-(20, 15, 4, 1, '5', '470000', '2023-10-10 21:16:30', '2023-10-10 21:16:30'),
-(21, 15, 9, 1, '10', '940000', '2023-10-10 21:16:30', '2023-10-10 21:16:30'),
-(22, 16, 4, 1, '5', '470000', '2023-10-10 21:16:55', '2023-10-10 21:16:55'),
-(23, 16, 9, 1, '10', '940000', '2023-10-10 21:16:55', '2023-10-10 21:16:55'),
-(24, 17, 4, 1, '5', '470000', '2023-10-10 21:17:12', '2023-10-10 21:17:12'),
-(25, 17, 9, 1, '10', '940000', '2023-10-10 21:17:12', '2023-10-10 21:17:12'),
-(26, 18, 4, 1, '5', '470000', '2023-10-10 21:19:45', '2023-10-10 21:19:45'),
-(27, 18, 9, 1, '10', '940000', '2023-10-10 21:19:45', '2023-10-10 21:19:45'),
-(28, 19, 4, 1, '5', '470000', '2023-10-10 21:19:56', '2023-10-10 21:19:56'),
-(29, 19, 9, 1, '10', '940000', '2023-10-10 21:19:56', '2023-10-10 21:19:56'),
-(30, 20, 4, 1, '5', '470000', '2023-10-10 21:20:11', '2023-10-10 21:20:11'),
-(31, 20, 9, 1, '10', '940000', '2023-10-10 21:20:11', '2023-10-10 21:20:11'),
-(32, 21, 4, 1, '5', '470000', '2023-10-10 21:20:50', '2023-10-10 21:20:50'),
-(33, 21, 9, 1, '10', '940000', '2023-10-10 21:20:50', '2023-10-10 21:20:50'),
-(34, 22, 4, 1, '5', '470000', '2023-10-10 21:21:13', '2023-10-10 21:21:13'),
-(35, 22, 9, 1, '10', '940000', '2023-10-10 21:21:13', '2023-10-10 21:21:13'),
-(36, 23, 4, 1, '5', '470000', '2023-10-10 21:21:37', '2023-10-10 21:21:37'),
-(37, 23, 9, 1, '10', '940000', '2023-10-10 21:21:37', '2023-10-10 21:21:37'),
-(38, 24, 4, 1, '5', '470000', '2023-10-10 21:21:48', '2023-10-10 21:21:48'),
-(39, 24, 9, 1, '10', '940000', '2023-10-10 21:21:48', '2023-10-10 21:21:48'),
-(40, 25, 4, 1, '5', '470000', '2023-10-10 21:22:00', '2023-10-10 21:22:00'),
-(41, 25, 9, 1, '10', '940000', '2023-10-10 21:22:00', '2023-10-10 21:22:00'),
-(42, 26, 4, 1, '5', '470000', '2023-10-10 21:23:03', '2023-10-10 21:23:03'),
-(43, 26, 9, 1, '10', '940000', '2023-10-10 21:23:03', '2023-10-10 21:23:03'),
-(44, 27, 4, 1, '5', '470000', '2023-10-10 21:23:43', '2023-10-10 21:23:43'),
-(45, 27, 9, 1, '10', '940000', '2023-10-10 21:23:43', '2023-10-10 21:23:43'),
-(46, 28, 4, 1, '5', '470000', '2023-10-10 21:31:51', '2023-10-10 21:31:51'),
-(47, 28, 9, 1, '10', '940000', '2023-10-10 21:31:51', '2023-10-10 21:31:51'),
-(48, 29, 4, 1, '5', '470000', '2023-10-13 23:50:45', '2023-10-13 23:50:45'),
-(49, 29, 9, 1, '10', '940000', '2023-10-13 23:50:45', '2023-10-13 23:50:45'),
-(50, 30, 4, 1, '5', '470000', '2023-10-14 03:50:10', '2023-10-14 03:50:10'),
-(51, 30, 9, 1, '10', '940000', '2023-10-14 03:50:10', '2023-10-14 03:50:10'),
-(52, 31, 4, 1, '5', '470000', '2023-10-14 04:03:46', '2023-10-14 04:03:46'),
-(53, 31, 9, 1, '10', '940000', '2023-10-14 04:03:46', '2023-10-14 04:03:46'),
-(54, 32, 4, 1, '5', '470000', '2023-10-14 04:06:39', '2023-10-14 04:06:39'),
-(55, 32, 9, 1, '10', '940000', '2023-10-14 04:06:39', '2023-10-14 04:06:39'),
-(56, 33, 4, 1, '5', '470000', '2023-10-14 04:57:54', '2023-10-14 04:57:54'),
-(57, 34, 9, 1, '5', '470000', '2023-10-21 21:35:19', '2023-10-21 21:35:19'),
+(14, 12, 4, 5, '5', '470000', '2023-10-10 21:13:59', '2023-10-10 21:13:59'),
+(15, 12, 9, 5, '10', '940000', '2023-10-10 21:13:59', '2023-10-10 21:13:59'),
+(16, 13, 4, 5, '5', '470000', '2023-10-10 21:14:51', '2023-10-10 21:14:51'),
+(17, 13, 9, 5, '10', '940000', '2023-10-10 21:14:51', '2023-10-10 21:14:51'),
+(18, 14, 4, 5, '5', '470000', '2023-10-10 21:15:14', '2023-10-10 21:15:14'),
+(19, 14, 9, 5, '10', '940000', '2023-10-10 21:15:14', '2023-10-10 21:15:14'),
+(20, 15, 4, 5, '5', '470000', '2023-10-10 21:16:30', '2023-10-10 21:16:30'),
+(21, 15, 9, 5, '10', '940000', '2023-10-10 21:16:30', '2023-10-10 21:16:30'),
+(22, 16, 4, 5, '5', '470000', '2023-10-10 21:16:55', '2023-10-10 21:16:55'),
+(23, 16, 9, 5, '10', '940000', '2023-10-10 21:16:55', '2023-10-10 21:16:55'),
+(24, 17, 4, 5, '5', '470000', '2023-10-10 21:17:12', '2023-10-10 21:17:12'),
+(25, 17, 9, 5, '10', '940000', '2023-10-10 21:17:12', '2023-10-10 21:17:12'),
+(26, 18, 4, 5, '5', '470000', '2023-10-10 21:19:45', '2023-10-10 21:19:45'),
+(27, 18, 9, 5, '10', '940000', '2023-10-10 21:19:45', '2023-10-10 21:19:45'),
+(28, 19, 4, 5, '5', '470000', '2023-10-10 21:19:56', '2023-10-10 21:19:56'),
+(29, 19, 9, 5, '10', '940000', '2023-10-10 21:19:56', '2023-10-10 21:19:56'),
+(30, 20, 4, 5, '5', '470000', '2023-10-10 21:20:11', '2023-10-10 21:20:11'),
+(31, 20, 9, 5, '10', '940000', '2023-10-10 21:20:11', '2023-10-10 21:20:11'),
+(32, 21, 4, 5, '5', '470000', '2023-10-10 21:20:50', '2023-10-10 21:20:50'),
+(33, 21, 9, 5, '10', '940000', '2023-10-10 21:20:50', '2023-10-10 21:20:50'),
+(34, 22, 4, 5, '5', '470000', '2023-10-10 21:21:13', '2023-10-10 21:21:13'),
+(35, 22, 9, 5, '10', '940000', '2023-10-10 21:21:13', '2023-10-10 21:21:13'),
+(36, 23, 4, 5, '5', '470000', '2023-10-10 21:21:37', '2023-10-10 21:21:37'),
+(37, 23, 9, 5, '10', '940000', '2023-10-10 21:21:37', '2023-10-10 21:21:37'),
+(38, 24, 4, 5, '5', '470000', '2023-10-10 21:21:48', '2023-10-10 21:21:48'),
+(39, 24, 9, 5, '10', '940000', '2023-10-10 21:21:48', '2023-10-10 21:21:48'),
+(40, 25, 4, 5, '5', '470000', '2023-10-10 21:22:00', '2023-10-10 21:22:00'),
+(41, 25, 9, 5, '10', '940000', '2023-10-10 21:22:00', '2023-10-10 21:22:00'),
+(42, 26, 4, 5, '5', '470000', '2023-10-10 21:23:03', '2023-10-10 21:23:03'),
+(43, 26, 9, 5, '10', '940000', '2023-10-10 21:23:03', '2023-10-10 21:23:03'),
+(44, 27, 4, 5, '5', '470000', '2023-10-10 21:23:43', '2023-10-10 21:23:43'),
+(45, 27, 9, 5, '10', '940000', '2023-10-10 21:23:43', '2023-10-10 21:23:43'),
+(46, 28, 4, 5, '5', '470000', '2023-10-10 21:31:51', '2023-10-10 21:31:51'),
+(47, 28, 9, 5, '10', '940000', '2023-10-10 21:31:51', '2023-10-10 21:31:51'),
+(48, 29, 4, 5, '5', '470000', '2023-10-13 23:50:45', '2023-10-13 23:50:45'),
+(49, 29, 9, 5, '10', '940000', '2023-10-13 23:50:45', '2023-10-13 23:50:45'),
+(50, 30, 4, 5, '5', '470000', '2023-10-14 03:50:10', '2023-10-14 03:50:10'),
+(51, 30, 9, 5, '10', '940000', '2023-10-14 03:50:10', '2023-10-14 03:50:10'),
+(52, 31, 4, 5, '5', '470000', '2023-10-14 04:03:46', '2023-10-14 04:03:46'),
+(53, 31, 9, 5, '10', '940000', '2023-10-14 04:03:46', '2023-10-14 04:03:46'),
+(54, 32, 4, 5, '5', '470000', '2023-10-14 04:06:39', '2023-10-14 04:06:39'),
+(55, 32, 9, 5, '10', '940000', '2023-10-14 04:06:39', '2023-10-14 04:06:39'),
+(56, 33, 4, 5, '5', '470000', '2023-10-14 04:57:54', '2023-10-14 04:57:54'),
+(57, 34, 9, 5, '5', '470000', '2023-10-21 21:35:19', '2023-10-21 21:35:19'),
 (60, 38, 1, 4, '5', '470000', '2024-10-19 07:30:05', '2024-10-19 07:30:05'),
 (62, 40, 1, 4, '5', '470000', '2024-10-19 07:38:15', '2024-10-19 07:38:15'),
 (65, 43, 1, 4, '5', '470000', '2024-10-19 08:42:27', '2024-10-19 08:42:27'),
@@ -461,7 +462,9 @@ CREATE TABLE `product_carts` (
 
 INSERT INTO `product_carts` (`id`, `user_id`, `product_id`, `color`, `size`, `qty`, `price`, `created_at`, `updated_at`) VALUES
 (6, 2, 1, 'Red', 'X', '5', '470000', '2023-10-10 18:41:33', '2023-10-10 18:41:33'),
-(12, 4, 1, 'Red', 'X', '5', '470000', '2024-10-19 07:17:47', '2024-10-19 07:17:47');
+(12, 4, 1, 'Red', 'X', '5', '470000', '2024-10-19 07:17:47', '2024-10-19 07:17:47'),
+(13, 1, 1, 'Golden', 'X', '3', '282000', '2024-10-21 00:17:49', '2024-10-21 00:17:49'),
+(14, 1, 2, 'Golden', 'X', '3', '282000', '2024-10-21 00:17:57', '2024-10-21 00:17:57');
 
 -- --------------------------------------------------------
 
@@ -582,7 +585,7 @@ CREATE TABLE `product_wishes` (
 --
 
 INSERT INTO `product_wishes` (`id`, `product_id`, `user_id`, `created_at`, `updated_at`) VALUES
-(5, 1, 1, '2023-09-23 20:30:24', '2023-09-23 20:30:24'),
+(5, 1, 5, '2023-09-23 20:30:24', '2023-09-23 20:30:24'),
 (9, 1, 4, '2024-10-18 20:12:41', '2024-10-18 20:12:41'),
 (11, 2, 4, '2024-10-18 20:16:28', '2024-10-18 20:16:28');
 
@@ -606,7 +609,8 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('GNlfgPUwQuGUd1Acr29mjUjj4s0yDqCCra75yFNy', NULL, '127.0.0.1', 'PostmanRuntime/7.42.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoibUd6REVuaXM2bVVUVkpyc0FuTUlIMFJnVUd1eTlqdUJhaXp5NVpQayI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzU6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9JbnZvaWNlQ3JlYXRlIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1729404112);
+('GNlfgPUwQuGUd1Acr29mjUjj4s0yDqCCra75yFNy', NULL, '127.0.0.1', 'PostmanRuntime/7.42.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoibUd6REVuaXM2bVVUVkpyc0FuTUlIMFJnVUd1eTlqdUJhaXp5NVpQayI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzU6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9JbnZvaWNlQ3JlYXRlIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1729404112),
+('UbuOAntfEuKEcWVV1TmB1FudWLfL822KCdbIngMt', NULL, '127.0.0.1', 'PostmanRuntime/7.42.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoieUtXZmlqUjdMUnhoQU16SkJFOU12U1RXeW82Tk9SMkVJRzI0SXU4VyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzU6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9JbnZvaWNlQ3JlYXRlIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1729492069);
 
 -- --------------------------------------------------------
 
@@ -654,10 +658,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `email`, `otp`, `created_at`, `updated_at`) VALUES
-(1, 'engr.rabbil@yahoo.com', '0', '2023-08-20 09:13:06', '2023-10-21 21:34:20'),
+(1, 'mazbaul20@gmail.com', '0', '2024-10-21 00:13:15', '2024-10-21 06:26:50'),
 (2, 'engr.rabbil@outlook.com', '0', '2023-09-23 19:16:21', '2023-10-13 23:28:08'),
 (3, 'Rahman527386@gmail.com', '848164', '2024-10-17 23:36:41', '2024-10-18 00:19:49'),
-(4, 'info@abdurrahman.com', '0', '2024-10-18 00:20:03', '2024-10-19 23:26:16');
+(4, 'info@abdurrahman.com', '0', '2024-10-18 00:20:03', '2024-10-19 23:26:16'),
+(5, 'engr.rabbil@yahoo.com', '0', '2023-08-20 09:13:06', '2024-10-21 06:26:42');
 
 --
 -- Indexes for dumped tables
@@ -823,7 +828,7 @@ ALTER TABLE `customer_profiles`
 -- AUTO_INCREMENT for table `invoices`
 --
 ALTER TABLE `invoices`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
 -- AUTO_INCREMENT for table `invoice_products`
@@ -859,7 +864,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `product_carts`
 --
 ALTER TABLE `product_carts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `product_details`
@@ -895,7 +900,7 @@ ALTER TABLE `sslcommerz_accounts`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables
